@@ -4,18 +4,10 @@
     font-size: clamp(#{$min}px, #{math.div($max, 1200) * 100}vw, #{$max}px);
 }
 
-@mixin hover {
-    @media (hover: hover) {
-        &:hover {
-            @content;
-        }
-    }
-
-    @media (hover: none) {
-        &:active {
-            @content;
-        }
-    }
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin reset-link {

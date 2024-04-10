@@ -6,11 +6,11 @@ module.exports = function (grunt) {
         tasks: ["html"],
       },
       css: {
-        files: ["src/styles/**/*.scss"],
+        files: ["src/styles/**/*.scss", "src/styles/blocks/*.scss"],
         tasks: ["css"],
       },
       js: {
-        files: [],
+        files: ["src/scripts/*.js"],
         tasks: ["js"],
       },
     },
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
           collapseWhitespace: true,
         },
         files: {
-          "dist/index.min.html": "src/index.html",
+          "dist/index.html": "src/index.html",
         },
       },
     },
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
         separator: "\n/*next file*/\n\n",
       },
       dist: {
-        src: [],
+        src: ["src/scripts/*.js"],
         dest: "dist/bundle.js",
       },
     },

@@ -1,0 +1,31 @@
+.burger-button {
+    @include square(48px);
+
+    border-radius: var(--border-radius);
+
+    @include hover {
+        background-color: var(--color-deep-blue);
+    }
+
+    &__line {
+        position: relative;
+        width: 60%;
+        height: 3px;
+        margin: 6px auto;
+        background-color: var(--color-light);
+        border-radius: var(--border-radius-small);
+        transition-duration: var(--transition-duration);
+    }
+
+    &.is-active &__line:nth-of-type(1) {
+        transform: translate3d(0,9px,0) rotate(45deg);
+    }
+
+    &.is-active &__line:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    &.is-active &__line:nth-of-type(3) {
+        transform: translate3d(0,-9px,0) rotate(-45deg);
+    }
+}

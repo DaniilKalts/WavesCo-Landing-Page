@@ -1,0 +1,15 @@
+.button {
+    @include flex-center;
+
+    height: var(--button-height);
+    padding-inline: 20px;
+    color: var(--color-light);
+    background-color: var(--color-deep-blue);
+    border: 1px solid var(--color-deep-blue);
+    border-radius: var(--border-radius);
+
+    @include hover {
+        color: var(--color-deep-blue);
+        background-color: var(--color-light);
+    }
+}
