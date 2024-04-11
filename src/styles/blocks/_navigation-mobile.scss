@@ -3,7 +3,7 @@
     top: 65px;
     width: 100%;
     min-height: calc(100vh - 65px);
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     visibility: hidden;
     opacity: 0;
     transition-duration: var(--transition-duration);
@@ -11,7 +11,6 @@
     &.is-visible {
         opacity: 1;
         visibility: visible;
-        display: block;
     }
 
     &__menu {
@@ -37,14 +36,14 @@
     }
 
     &__item:last-child {
-        padding: 12px 16px;
+        padding: 12px var(--container-padding-x);
         margin-top: auto;
     }
 
     &__link {
         display: inline-block;
         width: 100%;
-        padding: 12px 16px;
+        padding: 12px var(--container-padding-x);
 
         @include hover {
             color: var(--color-deep-blue);

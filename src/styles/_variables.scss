@@ -8,6 +8,7 @@
     --color-deep-yellow-saturated: #FCE2B3;
     --color-gray: #4F5261;
     --color-gray-light: #ACAFB8;
+    --color-gray-lightest: #EEEEEE;
     --color-gray-alt: #4C526A;
 
     --font-family-base: 'Inter', sans-serif;
@@ -18,7 +19,7 @@
     --border-radius-large: 12px;
 
     --container-width: 1044px;
-    --container-padding-x: 16px;
+    --container-padding-x: 28px;
 
     --section-padding-y: 60px;
 
@@ -27,4 +28,12 @@
     --button-height-large: 52px;
 
     --transition-duration: 0.2s;
+
+    @include mobile {
+        --container-padding-x: 16px;
+    }
+
+    @include mobile-sm {
+        --input-height: 44px;
+    }
 }
