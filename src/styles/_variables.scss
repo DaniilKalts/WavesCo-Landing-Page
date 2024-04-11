@@ -8,7 +8,8 @@
     --color-deep-yellow-saturated: #FCE2B3;
     --color-gray: #4F5261;
     --color-gray-light: #ACAFB8;
-    --color-gray-lightest: #EEEEEE;
+    --color-gray-lighter: #EEEEEE;
+    --color-gray-lightest: #FAFAFA;
     --color-gray-alt: #4C526A;
 
     --font-family-base: 'Inter', sans-serif;
@@ -31,9 +32,11 @@
 
     @include mobile {
         --container-padding-x: 16px;
+        --section-padding-y: 50px;
     }
 
     @include mobile-sm {
         --input-height: 44px;
+        --section-padding-y: 40px;
     }
 }
