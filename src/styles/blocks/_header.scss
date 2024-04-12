@@ -5,6 +5,7 @@
     translate: -50%;
     width: 100%;
     font-family: var(--font-family-secondary);
+    z-index: 5;
     
     &.header--filled {
         background-color: var(--color-dark-blue);

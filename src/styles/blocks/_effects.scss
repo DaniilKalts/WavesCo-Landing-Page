@@ -1,0 +1,163 @@
+.effects {
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 50px;
+        margin-bottom: 28px;
+
+        &-list {
+            height: 30px;
+            max-width: 60%;
+            display: flex;
+            align-items: center;
+            column-gap: 28px;
+            overflow-x: auto;
+
+            @include mobile-sm {
+                height: 44px;
+                column-gap: 20px;
+            }
+        }
+    
+        &-button {
+            position: relative;
+            height: 26px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--color-gray-alt);
+
+            &::after {
+                content: '';
+                width: 0%;
+                height: 2px;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                translate: -50%;
+                background-color: currentColor;
+                border-radius: var(--border-radius);
+                transition-duration: var(--transition-duration);
+            }
+
+            @include hover {
+                color: var(--color-dark-blue);
+
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &.is-active {
+                color: var(--color-dark-blue);
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__body {
+        margin-bottom: 20px;
+    }
+
+    &__sounds.updated {
+        animation-name: appear-disappear;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+
+        @keyframes appear-disappear {
+            0% { opacity:0; } 
+            100% { opacity:1;}
+        }
+    }
+
+    &__filter {
+        position: relative;
+        z-index: 1;
+        min-width: 36px;
+        color: var(--color-gray-alt);
+        background-color: var(--color-gray-lighter);
+
+        &-button {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+            padding: 4px 16px;
+            border-radius: var(--border-radius-small);
+    
+            @include mobile-sm {
+                padding: 4px;
+            }
+
+            @include hover {
+                background-color: var(--color-deep-blue-saturated);
+            }
+
+            @include mobile {
+                column-gap: 8px;
+            }
+        }
+
+        &-title {
+            font-size: 16px;
+
+            @include mobile {
+                font-size: 14px;
+            }
+
+            @include mobile-sm {
+                display: none;
+            }
+        }
+
+        &-options {
+            width: 100%;
+            min-width: 90px;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--color-gray-lighter);
+            overflow: hidden;
+            height: 0;
+            transition: var(--transition-duration);
+
+            &.is-active {
+                height: 102px;
+            }
+
+            button {
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        &-option {
+            padding: 6px 16px;
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                background-color: var(--color-deep-blue-saturated);
+            }
+        }
+    }
+
+    &__more {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--color-deep-blue);
+        transition-duration: var(--transition-duration);
+
+        @include mobile-sm {
+            font-size: 16px;
+        }
+
+        @include hover {
+            opacity: 0.6;
+        }
+    }
+}

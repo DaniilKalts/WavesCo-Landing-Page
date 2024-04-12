@@ -1,0 +1,129 @@
+.effect-bar {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    border-bottom: 1px solid var(--color-gray-lighter);
+
+    @include mobile-sm {
+        column-gap: 24px;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        column-gap: 36px;
+        width: 250px;
+
+        @include mobile {
+            column-gap: 26px
+        }
+
+        @include mobile-sm {
+            column-gap: 20px
+        }
+    }
+
+    &__button {
+        @include flex-center;
+        @include square(40px);
+
+        position: relative;
+        padding-left: 3px;
+        background-color: var(--color-deep-blue-saturated);
+        border-radius: 50%;
+
+        background-image: url('./images/icons/play-icon.svg');
+        background-position: 15px 13px;
+        background-repeat: no-repeat;
+
+        @include hover {
+            .effect-bar__button-image {
+                filter: grayscale(0);
+            }
+        }
+
+        &.is-playing {
+            background-image: none;
+
+            &::after {
+                content: '';
+                width: 4px;
+                height: 16px;
+                position: absolute;
+                top: 12px;
+                left: 14px;
+                background-color: var(--color-deep-blue);
+                border-radius: var(--border-radius-small);
+            }
+            
+            &::before {
+                content: '';
+                width: 4px;
+                height: 16px;
+                position: absolute;
+                top: 12px;
+                right: 14px;
+                background-color: var(--color-deep-blue);
+                border-radius: var(--border-radius-small);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+
+    &__duration {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__description {
+        width: 250px;
+        font-weight: 500;
+    }
+
+    &__tags {
+        text-transform: capitalize;
+        font-weight: 500;
+        width: 170px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+
+        @include mobile-sm {
+            column-gap: 12px;
+
+            & > button:first-child {
+                display: none;
+            }
+        }
+
+        &-image {
+            transition: var(--transition-duration);
+
+            @include mobile {
+                width: 28px;
+                height: 28px;
+            }
+
+            @include hover {
+                filter: contrast(300%);
+            }
+        }
+    }
+}

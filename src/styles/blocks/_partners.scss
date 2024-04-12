@@ -1,14 +1,5 @@
 .partners {
-    font-family: var(--font-family-secondary);
-
-    &__title {
-        font-weight: 600;
-        margin-bottom: 36px;
-
-        @include mobile-sm {
-            margin-bottom: 30px;
-        }
-    }
+    padding-top: 16px;
 
     &__list {
         display: flex;

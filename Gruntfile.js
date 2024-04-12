@@ -107,6 +107,10 @@ module.exports = function (grunt) {
         src: "src/fonts/**/*.woff2",
         dest: "dist/",
       },
+      sounds: {
+        src: "src/sounds/*.mp3",
+        dest: "dist/",
+      },
     },
   });
 
@@ -117,6 +121,7 @@ module.exports = function (grunt) {
   grunt.registerTask("js", ["concat", "uglify", "clean:js"]);
   grunt.registerTask("images", ["imagemin", "svgmin", "copy:favicon"]);
   grunt.registerTask("fonts", ["copy:fonts"]);
+  grunt.registerTask("sounds", ["copy:sounds"]);
 
   // Load Up Tasks
   grunt.loadNpmTasks("grunt-contrib-watch");

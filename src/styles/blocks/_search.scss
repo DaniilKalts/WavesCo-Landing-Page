@@ -11,6 +11,7 @@
         padding-left: 48px;
         padding-right: 28px;
         font-size: 16px;
+        font-weight: 500;
         border-radius: var(--border-radius);
         border: 0;
         outline: none;
@@ -26,7 +27,6 @@
 
         &::placeholder {
             color: var(--color-gray-alt);
-            font-weight: 500;
         }
     }
 
