@@ -1,0 +1,42 @@
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+    padding-block: 60px;
+    color: var(--color-light);
+    background-color: var(--color-deep-blue);
+
+    @include mobile {
+        padding-block: 50px;
+    }
+
+    &__header {
+        max-width: 600px;
+        font-family: var(--font-family-secondary);
+        text-align: center
+    }
+
+    &__title {
+        @include fluid-text(32, 24);
+
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    &__description {
+        @include fluid-text(20, 18);
+
+        font-weight: 300;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 50px;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+}

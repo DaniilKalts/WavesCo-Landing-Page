@@ -12,4 +12,15 @@
         color: var(--color-deep-blue);
         background-color: var(--color-light);
     }
+
+    &--transparent {
+        font-weight: 600;
+        color: var(--color-light);
+        background-color: transparent;
+        border: 3px solid var(--color-light);
+
+        @include mobile {
+            border: 2px solid var(--color-light);
+        }
+    }
 }

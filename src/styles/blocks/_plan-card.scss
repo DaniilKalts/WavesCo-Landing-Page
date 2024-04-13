@@ -1,0 +1,43 @@
+.plan-card {
+    padding: 34px 30px;
+    border-radius: var(--border-radius-large);
+    border: 1px solid var(--color-gray-lighter);
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+        background-color: var(--color-deep-blue-lighter)
+    }
+
+    &__title {
+        @include fluid-text(28, 24);
+
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    &__description {
+        @include fluid-text(18, 16);
+
+        max-width: 270px;
+        color: var(--color-gray-lighter);
+        margin-bottom: 28px;
+
+        @include mobile-above {
+            min-height: 93px;
+        }
+
+        @include mobile-above {
+            min-height: 66px;
+        }
+    }
+
+    &__price {
+        @include fluid-text(22, 20);
+
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        width: fit-content;
+    }
+}
