@@ -38,10 +38,6 @@
             row-gap: 40px;
         }
 
-        &-block {
-
-        }
-        
         &-title {
             @include fluid-text(20, 18);
 
@@ -56,15 +52,15 @@
             row-gap: 18px
         }
 
-        &-item {
-
-        }
-
         &-link {
             @include fluid-text(18, 16);
 
             font-weight: 300;
             color: var(--color-gray-light);
+
+            @include hover {
+                text-decoration: underline;
+            }
         }
     }
 }

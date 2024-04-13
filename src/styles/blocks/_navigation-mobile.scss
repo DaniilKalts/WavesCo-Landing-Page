@@ -45,6 +45,10 @@
         width: 100%;
         padding: 12px var(--container-padding-x);
 
+        &.is-current {
+            color: var(--color-deep-blue);
+        }
+
         @include hover {
             color: var(--color-deep-blue);
         }

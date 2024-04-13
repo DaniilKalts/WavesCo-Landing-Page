@@ -135,54 +135,37 @@ const soundEffectsOriginal = [
 ];
 
 let soundEffects = [...soundEffectsOriginal];
-
-soundEffects.forEach((sound) => {
-  sound.audio.player.addEventListener("ended", () => {
-    const soundEffectsButtons = document.querySelectorAll(
-      ".effect-bar__button"
-    );
-    soundEffectsButtons.forEach((btn) => {
-      btn.classList.remove("is-playing");
-    });
-    sound.audio.isPlaying = false;
-  });
-});
-
-const calculateDuration = (duration) => {
-  if (duration <= 9) {
-    return "00:0" + duration;
-  } else if (duration <= 59) {
-    return "00:" + duration;
-  } else {
-    const minutes =
-      Math.floor(duration / 60) <= 9
-        ? "0" + Math.floor(duration / 60)
-        : Math.floor(duration / 60);
-
-    const seconds =
-      Math.floor(duration % 60) <= 9
-        ? "0" + Math.floor(duration % 60)
-        : Math.floor(duration % 60);
-
-    return minutes + ":" + seconds;
-  }
-};
-
+let currentTabName = "all";
+let seeAll = false;
+let currentAudioIdx = null;
 const filterButton = document.querySelector(".effects__filter-button");
 const filterTitle = document.querySelector(".effects__filter-title");
 const filterOptions = document.querySelector(".effects__filter-options");
 const filterOptionsList = document.querySelectorAll(".effects__filter-option");
+const soundEffectsBody = document.querySelector(".effects__sounds");
+const effectTabs = document.querySelectorAll(".effects__header-button");
+const moreSoundsButton = document.querySelector(".effects__more");
+const audioPlayer = document.querySelector(".audio-player");
+const audioPlayerToggle = document.querySelector(".audio-player__toggle");
+const audioPlayerName = document.querySelector(".audio-player__name");
+const audioPlayerCurrentTime = document.querySelector(".audio-player__current");
+const audioPlayerDuration = document.querySelector(".audio-player__duration");
+const audioPlayerTimeline = document.querySelector(".audio-player__timeline");
+const audioPlayerProgress = document.querySelector(".audio-player__progress");
+
+// Define functions
+
+function calculateDuration(duration) {
+  const minutes = Math.floor(duration / 60);
+  const seconds = duration % 60;
+  return `${minutes < 10 ? "0" : ""}${minutes}:${
+    seconds < 10 ? "0" : ""
+  }${seconds}`;
+}
 
 function filterMenuToggle() {
   filterOptions.classList.toggle("is-active");
 }
-
-filterOptionsList.forEach((option) => {
-  option.addEventListener("click", () => {
-    filterTitle.textContent = option.textContent;
-    filterMenuToggle();
-  });
-});
 
 function favoriteHandle() {
   alert("Glad you liked it :D");
@@ -193,16 +176,47 @@ function moreHandle() {
 }
 
 function playAudio(id) {
+  currentAudioIdx = id;
   const currentAudio = soundEffects[id].audio;
   currentAudio.isPlaying = !currentAudio.isPlaying;
 
   const soundEffectsButtons = document.querySelectorAll(".effect-bar__button");
 
+  const voiceButton = document.getElementById("voiceButton");
+  const muteButton = document.getElementById("muteButton");
+
+  if (
+    currentAudio.player.volume === 0 &&
+    currentAudio.player.currentTime < 0.5
+  ) {
+    currentAudio.player.volume = 1;
+  }
+
+  if (currentAudio.player.volume === 0) {
+    voiceButton.classList.remove("visually-hidden");
+    muteButton.classList.add("visually-hidden");
+  } else {
+    voiceButton.classList.add("visually-hidden");
+    muteButton.classList.remove("visually-hidden");
+  }
+
   // If audio is paused, reset styles and pause it
   if (!currentAudio.isPlaying) {
-    event.target.classList.remove("is-playing");
     currentAudio.player.pause();
     currentAudio.player.isPlaying = false;
+    audioPlayerToggle.classList.remove("pause");
+    audioPlayerToggle.classList.add("play");
+
+    const currentEffectTitles = document.querySelectorAll(".effect-bar__title");
+    currentEffectTitles.forEach((title, idx) => {
+      if (title.textContent === soundEffects[id].name) {
+        const soundEffectsButtons = document.querySelectorAll(
+          ".effect-bar__button"
+        );
+        soundEffectsButtons[idx].classList.remove("is-playing");
+      }
+    });
+
     return;
   }
 
@@ -227,13 +241,38 @@ function playAudio(id) {
   });
 
   // Play and style active audio player
-  currentAudio.player.play();
-  event.target.classList.add("is-playing");
-  currentAudio.player.isPlaying = true;
-}
+  const currentEffectTitles = document.querySelectorAll(".effect-bar__title");
+  currentEffectTitles.forEach((title, idx) => {
+    if (title.textContent === soundEffects[id].name) {
+      const soundEffectsButtons = document.querySelectorAll(
+        ".effect-bar__button"
+      );
+      soundEffectsButtons[idx].classList.add("is-playing");
+    }
+  });
 
-// Paint sound effects
-const soundEffectsBody = document.querySelector(".effects__sounds");
+  currentAudio.player.isPlaying = true;
+  audioPlayer.classList.remove("is-hidden");
+  audioPlayerToggle.classList.add("pause");
+  audioPlayerToggle.classList.remove("play");
+  currentAudio.player.play();
+  currentAudio.player.addEventListener("timeupdate", () => {
+    const progress =
+      (currentAudio.player.currentTime / currentAudio.player.duration) * 100;
+    if (progress) {
+      audioPlayerProgress.style.width = `${progress}%`;
+    }
+    if (Math.floor(currentAudio.player.currentTime)) {
+      audioPlayerCurrentTime.textContent = calculateDuration(
+        Math.floor(currentAudio.player.currentTime)
+      );
+    }
+  });
+  audioPlayerName.textContent = soundEffects[id].name;
+  audioPlayerDuration.textContent = calculateDuration(
+    soundEffects[id].duration
+  );
+}
 
 function paintSoundEffects(soundsCount, tabType) {
   soundEffectsBody.classList.add("updated");
@@ -289,32 +328,6 @@ function paintSoundEffects(soundsCount, tabType) {
   }, 500);
 }
 
-document.onload = paintSoundEffects(6, "all");
-
-const effectTabs = document.querySelectorAll(".effects__header-button");
-const moreSoundsButton = document.querySelector(".effects__more");
-let seeAll = false;
-
-moreSoundsButton.onclick = () => {
-  paintSoundEffects(soundEffects.length, "all");
-  moreSoundsButton.style.display = "none";
-  seeAll = true;
-  effectTabs.forEach((item) => item.classList.remove("is-active"));
-  effectTabs[0].classList.add("is-active");
-};
-
-// Switching tabs
-let currentTabName = "all";
-
-effectTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    effectTabs.forEach((item) => item.classList.remove("is-active"));
-    tab.classList.add("is-active");
-    currentTabName = tab.textContent.toLocaleLowerCase();
-    paintSoundEffects(seeAll ? soundEffects.length : 6, currentTabName);
-  });
-});
-
 function sortLongestSounds() {
   soundEffects.sort((a, b) => b.duration - a.duration);
   paintSoundEffects(seeAll ? soundEffects.length : 6, currentTabName);
@@ -326,19 +339,65 @@ function sortShortestSounds() {
 }
 
 function sortSoundsByName() {
-  soundEffects.sort((a, b) => {
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-    if (nameA < nameB) {
-      return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
-    return 0;
-  });
+  soundEffects.sort((a, b) => a.name.localeCompare(b.name));
   paintSoundEffects(seeAll ? soundEffects.length : 6, currentTabName);
 }
+
+function playMusicFromPlayer() {
+  playAudio(currentAudioIdx);
+}
+
+function toggleMusicSound() {
+  const voiceButton = document.getElementById("voiceButton");
+  const muteButton = document.getElementById("muteButton");
+  const audio = soundEffects[currentAudioIdx].audio;
+
+  if (audio.player.volume === 0) {
+    audio.player.volume = 1;
+    voiceButton.classList.add("visually-hidden");
+    muteButton.classList.remove("visually-hidden");
+  } else {
+    audio.player.volume = 0;
+    voiceButton.classList.remove("visually-hidden");
+    muteButton.classList.add("visually-hidden");
+  }
+}
+
+// Add event listeners
+
+filterOptionsList.forEach((option) => {
+  option.addEventListener("click", () => {
+    filterTitle.textContent = option.textContent;
+    filterMenuToggle();
+  });
+});
+
+moreSoundsButton.onclick = () => {
+  paintSoundEffects(soundEffects.length, "all");
+  moreSoundsButton.style.display = "none";
+  seeAll = true;
+  effectTabs.forEach((item) => item.classList.remove("is-active"));
+  effectTabs[0].classList.add("is-active");
+};
+
+effectTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    effectTabs.forEach((item) => item.classList.remove("is-active"));
+    tab.classList.add("is-active");
+    currentTabName = tab.textContent.toLocaleLowerCase();
+    paintSoundEffects(seeAll ? soundEffects.length : 6, currentTabName);
+  });
+});
+
+audioPlayerTimeline.addEventListener("click", () => {
+  const elementWidth = audioPlayerTimeline.offsetWidth;
+  const clickX = event.clientX;
+  const percentageFromLeft = (clickX / elementWidth) * 100;
+
+  soundEffects[currentAudioIdx].audio.player.currentTime = Math.floor(
+    (percentageFromLeft * soundEffects[currentAudioIdx].duration) / 100
+  );
+});
 
 document.addEventListener("click", (e) => {
   const filterBlock = document.querySelector(".effects__filter");
@@ -349,3 +408,17 @@ document.addEventListener("click", (e) => {
     filterMenuToggle();
   }
 });
+
+soundEffects.forEach((sound) => {
+  sound.audio.player.addEventListener("ended", () => {
+    document.querySelectorAll(".effect-bar__button").forEach((btn) => {
+      btn.classList.remove("is-playing");
+    });
+    sound.audio.isPlaying = false;
+    audioPlayer.classList.add("is-hidden");
+  });
+});
+
+// Initialize the page
+
+document.onload = paintSoundEffects(6, "all");

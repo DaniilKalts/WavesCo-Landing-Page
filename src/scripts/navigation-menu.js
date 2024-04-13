@@ -1,4 +1,17 @@
-// Open/close navigation menu
+// Change active link on desktop
+
+const navigationDesktopLinks = document.querySelectorAll(".header__menu-link");
+navigationDesktopLinks.forEach((link) =>
+  link.addEventListener("click", () => {
+    navigationDesktopLinks.forEach((desktopLink) =>
+      desktopLink.classList.remove("is-current")
+    );
+
+    link.classList.add("is-current");
+  })
+);
+
+// Open/close mobile navigation menu
 
 const burgerButton = document.getElementById("burgerButton");
 const mobileNavigationMenu = document.getElementById("mobileNavigationMenu");
@@ -49,12 +62,19 @@ window.addEventListener("scroll", (event) => {
   }
 });
 
-// Close navigation menu, when click on navigation menu link
+// Close mobile navigation menu, when click on navigation menu link
 
 const navigationMobileLinks = document.querySelectorAll(
   ".navigation-mobile__link"
 );
 
-navigationMobileLinks.forEach((item) => {
-  item.addEventListener("click", resetNavigationMenu);
+navigationMobileLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navigationMobileLinks.forEach((mobileLink) =>
+      mobileLink.classList.remove("is-current")
+    );
+
+    link.classList.add("is-current");
+    resetNavigationMenu();
+  });
 });
