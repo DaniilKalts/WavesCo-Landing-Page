@@ -8,6 +8,10 @@
         background-color: var(--color-gray-lightest);
     }
 
+    &:nth-of-type(6) {
+        background-color: var(--color-deep-blue);
+    }
+
     &__title {
         font-family: var(--font-family-secondary);
         font-weight: 600;

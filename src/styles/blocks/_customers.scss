@@ -1,9 +1,10 @@
-.privileges {
+.customers {
+
 
     &__header {
         font-family: var(--font-family-secondary);
-        max-width: 450px;
-        margin-bottom: 36px;
+        max-width: 600px;
+        margin-bottom: 48px;
 
         @include mobile-sm {
             margin-bottom: 32px;
@@ -21,17 +22,5 @@
         @include fluid-text(24, 18);
 
         font-weight: 600;
-    }
-
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 60px;
-        max-width: 800px;
-
-        @include mobile-sm {
-            grid-template-columns: repeat(1, 1fr);
-            gap: 26px;
-        }
     }
 }

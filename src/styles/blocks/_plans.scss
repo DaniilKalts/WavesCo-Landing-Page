@@ -5,14 +5,13 @@
     row-gap: 40px;
     padding-block: 60px;
     color: var(--color-light);
-    background-color: var(--color-deep-blue);
 
     @include mobile {
         padding-block: 50px;
     }
 
     &__header {
-        max-width: 600px;
+        max-width: 650px;
         font-family: var(--font-family-secondary);
         text-align: center
     }

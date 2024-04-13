@@ -1,0 +1,43 @@
+.swiper {
+    padding-bottom: 70px;
+
+    &-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: var(--border-radius-large);
+        border: 1px solid var(--color-gray-lighter);
+
+        &__customer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-name {
+                font-size: 20px;
+                margin-top: -16px;
+            }
+            
+            &-occupation {
+                color: var(--color-gray-light);
+            }
+        }
+    
+        &__quote {
+            margin-bottom: 16px;
+        }
+    
+        &__feedback {
+            font-weight: 500;
+            color: var(--color-gray-alt);
+            margin-bottom: 12px;
+        }
+    }
+
+    &-pagination-bullet-active {
+        background-color: var(--color-deep-blue) !important;
+    }
+}
+
