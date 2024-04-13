@@ -32,18 +32,18 @@
             margin-bottom: 16px;
     
             @include mobile-sm {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
     
         &-description {
-            @include fluid-text(20, 18);
+            @include fluid-text(20, 16);
     
             color: var(--color-gray-light);
             text-align: center;
             
             @include mobile-sm {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }

@@ -60,11 +60,7 @@
             }
         }
     }
-
-    &__body {
-        margin-bottom: 20px;
-    }
-
+    
     &__sounds.updated {
         animation-name: appear-disappear;
         animation-duration: 0.5s;
@@ -150,14 +146,16 @@
         font-size: 18px;
         font-weight: 600;
         color: var(--color-deep-blue);
+        margin-top: 20px;
         transition-duration: var(--transition-duration);
+        text-decoration: underline;
 
         @include mobile-sm {
             font-size: 16px;
         }
 
         @include hover {
-            opacity: 0.6;
+            text-decoration: none;
         }
     }
 }
