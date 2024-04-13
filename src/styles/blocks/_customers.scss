@@ -1,5 +1,9 @@
 .customers {
+    margin-bottom: 30px;
 
+    @include mobile {
+        margin-bottom: 20px;
+    }
 
     &__header {
         font-family: var(--font-family-secondary);

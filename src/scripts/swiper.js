@@ -1,6 +1,6 @@
 const swiper = new Swiper(".swiper", {
   loop: true,
-
+  grabCursor: true,
   spaceBetween: 30,
 
   breakpoints: {
