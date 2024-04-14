@@ -27,7 +27,7 @@
         <nav class="header__menu hidden-mobile">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-link is-current" href="#">Home</a>
+              <a class="header__menu-link" href="#home">Home</a>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="#effects">Best for Youtube</a>
@@ -62,7 +62,7 @@
         <nav class="navigation-mobile__menu">
           <ul class="navigation-mobile__list">
             <li class="navigation-mobile__item">
-              <a class="navigation-mobile__link is-current" href="#">Home</a>
+              <a class="navigation-mobile__link" href="#home">Home</a>
             </li>
             <li class="navigation-mobile__item">
               <a class="navigation-mobile__link" href="#effects"
@@ -86,7 +86,7 @@
       </div>
     </header>
     <main class="content">
-      <section class="section">
+      <section class="section" id="home">
         <div class="section__body hero">
           <div class="hero__inner container">
             <div class="hero__info">
@@ -101,18 +101,18 @@
               </div>
             </div>
             <div class="hero__search search">
-              <div class="search__inner">
-                <label class="visually-hidden" for="soundEffect"
+              <form class="search__inner" id="searchForm">
+                <label class="visually-hidden" for="searchInput"
                   >Search sound effects</label
                 >
                 <input
                   class="search__field"
-                  id="soundEffect"
-                  name="soundEffect"
+                  id="searchInput"
+                  name="searchInput"
                   placeholder="Search sound effects"
                   type="text"
                 />
-              </div>
+              </form>
               <div class="search__keywords">
                 <p>
                   Try keyword: happy, funny, natural, horror, jumpscare and more
@@ -441,7 +441,9 @@
               <div class="swiper">
                 <ul class="swiper-wrapper">
                   <li class="swiper-slide">
-                    <img class="swiper-slide__quote" src="./images/icons/quote-icon.svg" width="31" height="23" alt="" loading="lazy">
+                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                    </svg>
                     <div class="swiper-slide__feedback">
                       <p>The sounds from WavesCo is great and it really helps our team to save time and production costs.</p>
                     </div>
@@ -454,7 +456,9 @@
                     </div>
                   </li>
                   <li class="swiper-slide">
-                    <img class="swiper-slide__quote" src="./images/icons/quote-icon.svg" width="31" height="23" alt="" loading="lazy">
+                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                    </svg>       
                     <div class="swiper-slide__feedback">
                       <p>WavesCo was a great choice for our team for film production, the quality is amazingly great.</p>
                     </div>
@@ -467,7 +471,9 @@
                     </div>
                   </li>
                   <li class="swiper-slide">
-                    <img class="swiper-slide__quote" src="./images/icons/quote-icon.svg" width="31" height="23" alt="" loading="lazy">
+                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                    </svg>       
                     <div class="swiper-slide__feedback">
                       <p>Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.</p>
                     </div>
@@ -479,8 +485,10 @@
                       </div>
                     </div>
                   </li>
-                                    <li class="swiper-slide">
-                    <img class="swiper-slide__quote" src="./images/icons/quote-icon.svg" width="31" height="23" alt="" loading="lazy">
+                  <li class="swiper-slide">
+                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                    </svg>       
                     <div class="swiper-slide__feedback">
                       <p>The sounds from WavesCo is great and it really helps our team to save time and production costs.</p>
                     </div>
@@ -493,7 +501,9 @@
                     </div>
                   </li>
                   <li class="swiper-slide">
-                    <img class="swiper-slide__quote" src="./images/icons/quote-icon.svg" width="31" height="23" alt="" loading="lazy">
+                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                    </svg>       
                     <div class="swiper-slide__feedback">
                       <p>WavesCo was a great choice for our team for film production, the quality is amazingly great.</p>
                     </div>
@@ -506,7 +516,9 @@
                     </div>
                   </li>
                   <li class="swiper-slide">
-                    <img class="swiper-slide__quote" src="./images/icons/quote-icon.svg" width="31" height="23" alt="" loading="lazy">
+                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                    </svg>       
                     <div class="swiper-slide__feedback">
                       <p>Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.</p>
                     </div>
@@ -606,6 +618,9 @@
         </nav>
       </div>
     </footer>
+    <div class="audio-modal visually-hidden">
+      <div class="audio-modal__spinner"></div>
+    </div>
     <div class="audio-player is-hidden">
       <div class="audio-player__timeline">
         <div class="audio-player__progress"></div>

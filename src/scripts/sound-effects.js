@@ -185,11 +185,11 @@ function playAudio(id) {
   const voiceButton = document.getElementById("voiceButton");
   const muteButton = document.getElementById("muteButton");
 
-  if (
-    currentAudio.player.volume === 0 &&
-    currentAudio.player.currentTime < 0.5
-  ) {
-    currentAudio.player.volume = 1;
+  if (currentAudio.player.currentTime < 0.5) {
+    audioPlayerCurrentTime.textContent = "00:00";
+    if (currentAudio.player.volume === 0) {
+      currentAudio.player.volume = 1;
+    }
   }
 
   if (currentAudio.player.volume === 0) {
@@ -392,7 +392,7 @@ effectTabs.forEach((tab) => {
 audioPlayerTimeline.addEventListener("click", () => {
   const elementWidth = audioPlayerTimeline.offsetWidth;
   const clickX = event.clientX;
-  const percentageFromLeft = (clickX / elementWidth) * 100;
+  let percentageFromLeft = (clickX / elementWidth) * 100;
 
   soundEffects[currentAudioIdx].audio.player.currentTime = Math.floor(
     (percentageFromLeft * soundEffects[currentAudioIdx].duration) / 100
@@ -415,6 +415,8 @@ soundEffects.forEach((sound) => {
       btn.classList.remove("is-playing");
     });
     sound.audio.isPlaying = false;
+    sound.audio.player.volume = 1;
+    audioPlayerCurrentTime.textContent = "00:00";
     audioPlayer.classList.add("is-hidden");
   });
 });

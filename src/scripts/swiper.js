@@ -1,3 +1,5 @@
+// Configuration of swiper
+
 const swiper = new Swiper(".swiper", {
   loop: true,
   grabCursor: true,

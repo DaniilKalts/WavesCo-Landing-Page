@@ -21,11 +21,12 @@
             }
             
             &-occupation {
-                color: var(--color-gray-light);
+                color: var(--color-gray);
             }
         }
     
         &__quote {
+            color: var(--color-deep-blue-lighter);
             margin-bottom: 16px;
         }
     

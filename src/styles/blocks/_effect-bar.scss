@@ -33,15 +33,13 @@
         padding-left: 3px;
         background-color: var(--color-deep-blue-saturated);
         border-radius: 50%;
-
         background-image: url('./images/icons/play-icon.svg');
         background-position: 15px 13px;
         background-repeat: no-repeat;
+        transition-duration: var(--transition-duration);
 
         @include hover {
-            .effect-bar__button-image {
-                filter: grayscale(0);
-            }
+            box-shadow: 0 0 0 5px var(--color-deep-blue-saturated-lighter);
         }
 
         &.is-playing {
