@@ -296,7 +296,7 @@ function paintSoundEffects(soundsCount, tabType) {
             <span class="visually-hidden">Play sound button</span>
           </button>
           <div>
-            <h4 class="effect-bar__title">${sound.name}</h4>
+            <h3 class="effect-bar__title">${sound.name}</h3>
             <div class="effect-bar__duration">
               <p>${calculateDuration(sound.duration)}</p>
             </div>

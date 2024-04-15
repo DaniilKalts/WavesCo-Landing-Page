@@ -79,5 +79,3 @@ audioModal.addEventListener("click", (e) => {
     hideAudioModal();
   }
 });
-
-console.log("");
