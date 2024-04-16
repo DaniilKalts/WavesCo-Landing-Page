@@ -39,24 +39,26 @@ module.exports = function (grunt) {
       },
     },
     concat: {
-      options: {
-        separator: "\n/*next file*/\n\n",
+      navigationMenu: {
+        src: ["src/scripts/navigation-menu.js"],
+        dest: "dist/navigation-menu.js",
       },
-      dist: {
-        src: ["src/scripts/*.js"],
+      otherScripts: {
+        src: ["src/scripts/*.js", "!src/scripts/navigation-menu.js"],
         dest: "dist/bundle.js",
       },
     },
     uglify: {
       build: {
         files: {
+          "dist/navigation-menu.min.js": ["dist/navigation-menu.js"],
           "dist/bundle.min.js": ["dist/bundle.js"],
         },
       },
     },
     clean: {
       css: ["dist/main.css"],
-      js: ["dist/bundle.js"],
+      js: ["dist/navigation-menu.js", "dist/bundle.js"],
     },
     imagemin: {
       jpg: {
@@ -118,7 +120,12 @@ module.exports = function (grunt) {
   grunt.registerTask("default", ["watch"]);
   grunt.registerTask("html", ["htmlmin"]);
   grunt.registerTask("css", ["sass", "cssmin", "clean:css"]);
-  grunt.registerTask("js", ["concat", "uglify", "clean:js"]);
+  grunt.registerTask("js", [
+    "concat:navigationMenu",
+    "concat:otherScripts",
+    "uglify",
+    "clean:js",
+  ]);
   grunt.registerTask("images", ["imagemin", "svgmin", "copy:favicon"]);
   grunt.registerTask("fonts", ["copy:fonts"]);
   grunt.registerTask("sounds", ["copy:sounds"]);

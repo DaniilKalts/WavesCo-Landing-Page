@@ -206,6 +206,7 @@ function playAudio(id) {
     currentAudio.player.isPlaying = false;
     audioPlayerToggle.classList.remove("pause");
     audioPlayerToggle.classList.add("play");
+    audioPlayerToggle.setAttribute("aria-label", "Play audio button");
 
     const currentEffectTitles = document.querySelectorAll(".effect-bar__title");
     currentEffectTitles.forEach((title, idx) => {
@@ -255,6 +256,7 @@ function playAudio(id) {
   audioPlayer.classList.remove("is-hidden");
   audioPlayerToggle.classList.add("pause");
   audioPlayerToggle.classList.remove("play");
+  audioPlayerToggle.setAttribute("aria-label", "Stop audio button");
   currentAudio.player.play();
   currentAudio.player.addEventListener("timeupdate", () => {
     const progress =

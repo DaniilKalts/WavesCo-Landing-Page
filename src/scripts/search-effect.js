@@ -64,6 +64,7 @@ searchForm.addEventListener("submit", async (e) => {
     `;
   } else {
     hideAudioModal();
+    alert("The api must be expired :(");
   }
 
   searchInput.value = "";

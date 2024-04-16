@@ -9,7 +9,14 @@
     />
     <title>Free Sound Effects - No Copyright</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="preload" href="./fonts/Inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin ></link>
+    <link rel="preload" href="./fonts/Inter/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin ></link>
+    <link rel="preload" href="./fonts/Poppins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin ></link>
+    <link rel="preload" href="./fonts/Poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin ></link>
+    <link rel="preload" href="./fonts/Poppins/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin ></link>
+    <link rel="preload" href="./images/hero/hero-bg.avif" as="image">
     <link rel="stylesheet" href="./main.min.css" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   </head>
   <body>
     <header class="header">
@@ -134,177 +141,173 @@
             Trusted by top Youtuber and Production House
           </h2>
         </header>
-        <div class="section__body">
-          <div class="partners">
-            <ul class="partners__list">
-              <li class="partners__item">
-                <a
-                  class="partners__item-link"
-                  href="https://dudeperfect.com/"
-                  target="_blank"
-                >
-                  <img
-                    class="partners__item-image"
-                    src="./images/partners/dudeperfect.svg"
-                    width="50"
-                    height="50"
-                    alt="Dude Perfect"
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li class="partners__item">
-                <a
-                  class="partners__item-link"
-                  href="https://www.youtube.com/user/pewdiepie"
-                  target="_blank"
-                >
-                  <img
-                    class="partners__item-image"
-                    src="./images/partners/pewdiepie.svg"
-                    width="50"
-                    height="50"
-                    alt="Pewdiepie"
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li class="partners__item">
-                <a
-                  class="partners__item-link"
-                  href="https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA"
-                  target="_blank"
-                >
-                  <img
-                    class="partners__item-image"
-                    src="./images/partners/mrbeast.svg"
-                    width="77"
-                    height="54"
-                    alt="MrBeast"
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li class="partners__item">
-                <a
-                  class="partners__item-link"
-                  href="https://www.warnerbros.com/"
-                  target="_blank"
-                >
-                  <img
-                    class="partners__item-image"
-                    src="./images/partners/warner-bros.svg"
-                    width="50"
-                    height="62"
-                    alt="Warner Bros"
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li class="partners__item">
-                <a
-                  class="partners__item-link"
-                  href="https://www.netflix.com/"
-                  target="_blank"
-                >
-                  <img
-                    class="partners__item-image"
-                    src="./images/partners/netflix.svg"
-                    width="94"
-                    height="25"
-                    alt="Netflix"
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li class="partners__item">
-                <a
-                  class="partners__item-link"
-                  href="https://www.pixar.com/"
-                  target="_blank"
-                >
-                  <img
-                    class="partners__item-image"
-                    src="./images/partners/pixar.svg"
-                    width="130"
-                    height="25"
-                    alt="Pixar"
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li class="partners__item">
-                <a
-                  class="partners__item-link"
-                  href="https://www.youtube.com/@PickyPicksid"
-                  target="_blank"
-                >
-                  <img
-                    class="partners__item-image"
-                    src="./images/partners/picky-picks.svg"
-                    width="50"
-                    height="50"
-                    alt="Picky Picks"
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="section__body partners">
+          <ul class="partners__list">
+            <li class="partners__item">
+              <a
+                class="partners__item-link"
+                href="https://dudeperfect.com/"
+                target="_blank"
+              >
+                <img
+                  class="partners__item-image"
+                  src="./images/partners/dudeperfect.svg"
+                  width="50"
+                  height="50"
+                  alt="Dude Perfect"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a
+                class="partners__item-link"
+                href="https://www.youtube.com/user/pewdiepie"
+                target="_blank"
+              >
+                <img
+                  class="partners__item-image"
+                  src="./images/partners/pewdiepie.svg"
+                  width="50"
+                  height="50"
+                  alt="Pewdiepie"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a
+                class="partners__item-link"
+                href="https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA"
+                target="_blank"
+              >
+                <img
+                  class="partners__item-image"
+                  src="./images/partners/mrbeast.svg"
+                  width="77"
+                  height="54"
+                  alt="MrBeast"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a
+                class="partners__item-link"
+                href="https://www.warnerbros.com/"
+                target="_blank"
+              >
+                <img
+                  class="partners__item-image"
+                  src="./images/partners/warner-bros.svg"
+                  width="50"
+                  height="62"
+                  alt="Warner Bros"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a
+                class="partners__item-link"
+                href="https://www.netflix.com/"
+                target="_blank"
+              >
+                <img
+                  class="partners__item-image"
+                  src="./images/partners/netflix.svg"
+                  width="94"
+                  height="25"
+                  alt="Netflix"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a
+                class="partners__item-link"
+                href="https://www.pixar.com/"
+                target="_blank"
+              >
+                <img
+                  class="partners__item-image"
+                  src="./images/partners/pixar.svg"
+                  width="130"
+                  height="25"
+                  alt="Pixar"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li class="partners__item">
+              <a
+                class="partners__item-link"
+                href="https://www.youtube.com/@PickyPicksid"
+                target="_blank"
+              >
+                <img
+                  class="partners__item-image"
+                  src="./images/partners/picky-picks.svg"
+                  width="50"
+                  height="50"
+                  alt="Picky Picks"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="section container" id="effects">
           <header class="section__header">
             <h2 class="section__title">Best sound effects for youtube videos</h2>
           </header>
-          <div class="section__body">
-            <div class="effects">
+          <div class="section__body effects">
               <header class="effects__header">
-                  <ul class="effects__header-list">
-                    <li class="effects__header-item">
-                      <button class="effects__header-button is-active" type="button">All</button>
+                <ul class="effects__header-list">
+                  <li class="effects__header-item">
+                    <button class="effects__header-button is-active" type="button">All</button>
+                  </li>
+                  <li class="effects__header-item">
+                    <button class="effects__header-button" type="button">Jumpscare</button>
+                  </li>
+                  <li class="effects__header-item">
+                    <button class="effects__header-button" type="button">Mellow</button>
+                  </li>
+                  <li class="effects__header-item">
+                    <button class="effects__header-button" type="button">Happiness</button>
+                  </li>
+                  <li class="effects__header-item">
+                    <button class="effects__header-button" type="button">Ambience</button>
+                  </li>
+                  <li class="effects__header-item">
+                    <button class="effects__header-button" type="button">Gaming</button>
+                  </li>
+                </ul>
+                <div class="effects__filter">
+                  <button class="effects__filter-button" type="button" onclick="filterMenuToggle()" aria-label="Filter options">
+                    <span class="effects__filter-title">Filter</span>
+                    <img class="effects__filter-image" src="./images/icons/filter-icon.svg" width="36" height="36" alt="" loading="lazy">
+                  </button>
+                  <ul class="effects__filter-options">
+                    <li class="effects__filter-option">
+                      <button type="button" onclick="sortLongestSounds()">Longest</button>
                     </li>
-                    <li class="effects__header-item">
-                      <button class="effects__header-button" type="button">Jumpscare</button>
+                    <li class="effects__filter-option" onclick="sortShortestSounds()">
+                      <button type="button">Shortest</button>
                     </li>
-                    <li class="effects__header-item">
-                      <button class="effects__header-button" type="button">Mellow</button>
-                    </li>
-                    <li class="effects__header-item">
-                      <button class="effects__header-button" type="button">Happiness</button>
-                    </li>
-                    <li class="effects__header-item">
-                      <button class="effects__header-button" type="button">Ambience</button>
-                    </li>
-                    <li class="effects__header-item">
-                      <button class="effects__header-button" type="button">Gaming</button>
+                    <li class="effects__filter-option">
+                      <button type="button" onclick="sortSoundsByName()">A-z</button>
                     </li>
                   </ul>
-                  <div class="effects__filter">
-                    <button class="effects__filter-button" type="button" onclick="filterMenuToggle()" aria-label="Filter options">
-                      <span class="effects__filter-title">Filter</span>
-                      <img class="effects__filter-image" src="./images/icons/filter-icon.svg" width="36" height="36" alt="" loading="lazy">
-                    </button>
-                    <ul class="effects__filter-options">
-                      <li class="effects__filter-option">
-                        <button type="button" onclick="sortLongestSounds()">Longest</button>
-                      </li>
-                      <li class="effects__filter-option" onclick="sortShortestSounds()">
-                        <button type="button">Shortest</button>
-                      </li>
-                      <li class="effects__filter-option">
-                        <button type="button" onclick="sortSoundsByName()">A-z</button>
-                      </li>
-                    </ul>
-                  </div>
-              </header>
-              <div class="effects__body">
-                <ul class="effects__sounds">
-                  <!-- There'll be painted sound effects from json -->
-                </ul>
-              </div>
-              <button class="effects__more" type="button" onclick="seeMoreEffects(undefined, 'all')">See all sound effects</button>
+                </div>
+            </header>
+            <div class="effects__body">
+              <ul class="effects__sounds">
+                <!-- There'll be painted sound effects from json -->
+              </ul>
             </div>
+            <button class="effects__more" type="button" onclick="seeMoreEffects(undefined, 'all')">See all sound effects</button>
           </div>
         </div>
       </section>
@@ -312,230 +315,222 @@
         <header class="section__header">
           <h2 class="section__title">Browse by category</h2>
         </header>
-        <div class="section__body">
-          <div class="categories">
-            <div class="categories__body">
-              <ul class="categories__list">
-                <li class="categories__item" onclick="onCategoryClick('Musical')">
-                  Musical
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Industrial')">
-                  Industrial
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Movie')">
-                  Movie Sounds
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Animal')">
-                  Animal
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('People')">
-                  People
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Vehicles')">
-                  Vehicles
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Designs')">
-                  Sound Designs
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Emergency')">
-                  Emergency
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Bell')">
-                  Bell
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Nature')">
-                  Nature
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Cartoon')">
-                  Cartoon
-                </li>
-                <li class="categories__item" onclick="onCategoryClick('Horror')">
-                  Horror
-                </li>
-              </ul>
-            </div>
+        <div class="section__body categories">
+          <div class="categories__body">
+            <ul class="categories__list">
+              <li class="categories__item" onclick="onCategoryClick('Musical')">
+                Musical
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Industrial')">
+                Industrial
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Movie')">
+                Movie Sounds
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Animal')">
+                Animal
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('People')">
+                People
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Vehicles')">
+                Vehicles
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Designs')">
+                Sound Designs
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Emergency')">
+                Emergency
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Bell')">
+                Bell
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Nature')">
+                Nature
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Cartoon')">
+                Cartoon
+              </li>
+              <li class="categories__item" onclick="onCategoryClick('Horror')">
+                Horror
+              </li>
+            </ul>
             <button class="categories__more" type="button" onclick="alert('That is all what we have for now')">See all category</button>
           </div>
         </div>
       </section>
       <section class="section container" id="privileges">
-        <div class="section__body">
-          <div class="privileges">
-            <header class="privileges__header">
-              <h2 class="privileges__title">Why us?</h2>
-              <h3 class="privileges__subtitle">We are providing the best quality sound effects without copyright.</h3>
-            </header>
-            <div class="privileges__body">
-              <ul class="privileges__list">
-                <li class="privileges__item privilege-card">
-                  <img class="privilege-card__icon" src="./images/icons/satisfied-customer-icon.svg" width="55" height="55" alt="" loading="lazy">
-                  <h3 class="privilege-card__title">1.203.322 Customer satisfied</h3>
-                  <div class="privilege-card__description">
-                    <p>We've helped more than 1 million customers find best sound effects</p>
-                  </div>
-                </li>
-                <li class="privileges__item privilege-card">
-                  <img class="privilege-card__icon" src="./images/icons/sound-icon.svg" width="55" height="55" alt="" loading="lazy">
-                  <h3 class="privilege-card__title">650.654 Sounds</h3>
-                  <div class="privilege-card__description">
-                    <p>More than 600 thousand high quality to download. Still counting</p>
-                  </div>
-                </li>
-                <li class="privileges__item privilege-card">
-                  <img class="privilege-card__icon" src="./images/icons/royalty-free-icon.svg" width="55" height="55" alt="" loading="lazy">
-                  <h3 class="privilege-card__title">Royalty-free</h3>
-                  <div class="privilege-card__description">
-                    <p>Just download and use the sound for your videos without royalty</p>
-                  </div>
-                </li>
-                <li class="privileges__item privilege-card">
-                  <img class="privilege-card__icon" src="./images/icons/best-quality-icon.svg" width="55" height="55" alt="" loading="lazy">
-                  <h3 class="privilege-card__title">Provide proper sounds</h3>
-                  <div class="privilege-card__description">
-                    <p>We just provide sounds with the best quality  for customers</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+        <div class="section__body privileges">
+          <header class="privileges__header">
+            <h2 class="privileges__title">Why us?</h2>
+            <h3 class="privileges__subtitle">We are providing the best quality sound effects without copyright.</h3>
+          </header>
+          <div class="privileges__body">
+            <ul class="privileges__list">
+              <li class="privileges__item privilege-card">
+                <img class="privilege-card__icon" src="./images/icons/satisfied-customer-icon.svg" width="55" height="55" alt="" loading="lazy">
+                <h3 class="privilege-card__title">1.203.322 Customer satisfied</h3>
+                <div class="privilege-card__description">
+                  <p>We've helped more than 1 million customers find best sound effects</p>
+                </div>
+              </li>
+              <li class="privileges__item privilege-card">
+                <img class="privilege-card__icon" src="./images/icons/sound-icon.svg" width="55" height="55" alt="" loading="lazy">
+                <h3 class="privilege-card__title">650.654 Sounds</h3>
+                <div class="privilege-card__description">
+                  <p>More than 600 thousand high quality to download. Still counting</p>
+                </div>
+              </li>
+              <li class="privileges__item privilege-card">
+                <img class="privilege-card__icon" src="./images/icons/royalty-free-icon.svg" width="55" height="55" alt="" loading="lazy">
+                <h3 class="privilege-card__title">Royalty-free</h3>
+                <div class="privilege-card__description">
+                  <p>Just download and use the sound for your videos without royalty</p>
+                </div>
+              </li>
+              <li class="privileges__item privilege-card">
+                <img class="privilege-card__icon" src="./images/icons/best-quality-icon.svg" width="55" height="55" alt="" loading="lazy">
+                <h3 class="privilege-card__title">Provide proper sounds</h3>
+                <div class="privilege-card__description">
+                  <p>We just provide sounds with the best quality  for customers</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
       <section class="section" id="plans">
-        <div class="section__body">
-          <div class="plans container">
-            <header class="plans__header">
-              <h2 class="plans__title">Download sound effects for your project</h2>
-              <div class="plans__description">
-                <p>Find the right plan for you</p>
-              </div>
-            </header>
-            <div class="plans__body">
-              <ul class="plans__list">
-                <li class="plans__item plan-card">
-                  <h3 class="plan-card__title">Basic</h3>
-                  <div class="plan-card__description">
-                    <p>Download any royalty-free sound effects</p>
-                  </div>
-                  <h4 class="plan-card__price">Free</h4>
-                  <a class="plan-card__button button button--transparent" href="/">Get started</a>
-                </li>
-                <li class="plans__item plan-card">
-                  <h3 class="plan-card__title">Premium</h3>
-                  <div class="plan-card__description">
-                    <p>Download premium sound effects and use them for any business purpose</p>
-                  </div>
-                  <h4 class="plan-card__price">Start from $12/month</h4>
-                  <a class="plan-card__button button button--transparent" href="/">Get started</a>
-                </li>
-              </ul>
+        <div class="section__body plans container">
+          <header class="plans__header">
+            <h2 class="plans__title">Download sound effects for your project</h2>
+            <div class="plans__description">
+              <p>Find the right plan for you</p>
             </div>
-            <h3 class="plans__description">Join premium with 434,849 creators.</h3>
+          </header>
+          <div class="plans__body">
+            <ul class="plans__list">
+              <li class="plans__item plan-card">
+                <h3 class="plan-card__title">Basic</h3>
+                <div class="plan-card__description">
+                  <p>Download any royalty-free sound effects</p>
+                </div>
+                <h4 class="plan-card__price">Free</h4>
+                <a class="plan-card__button button button--transparent" href="/">Get started</a>
+              </li>
+              <li class="plans__item plan-card">
+                <h3 class="plan-card__title">Premium</h3>
+                <div class="plan-card__description">
+                  <p>Download premium sound effects and use them for any business purpose</p>
+                </div>
+                <h4 class="plan-card__price">Start from $12/month</h4>
+                <a class="plan-card__button button button--transparent" href="/">Get started</a>
+              </li>
+            </ul>
           </div>
+          <h3 class="plans__description">Join premium with 434,849 creators.</h3>
         </div>
       </section>
       <section class="section container">
-        <div class="section__body">
-          <div class="customers">
-            <header class="customers__header">
-              <h2 class="customers__title">Testimonials</h2>
-              <h3 class="customers__subtitle">Hear good experiences from our customers</h3>
-            </header>
-            <div class="customers__body">
-              <div class="swiper">
-                <ul class="swiper-wrapper" role="region" aria-label="Testimonials List">
-                  <li class="swiper-slide" aria-label="Testimonial 1">
-                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
-                    </svg>
-                    <div class="swiper-slide__feedback">
-                      <p>The sounds from WavesCo is great and it really helps our team to save time and production costs.</p>
+        <div class="section__body customers">
+          <header class="customers__header">
+            <h2 class="customers__title">Testimonials</h2>
+            <h3 class="customers__subtitle">Hear good experiences from our customers</h3>
+          </header>
+          <div class="customers__body">
+            <div class="swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                  </svg>
+                  <div class="swiper-slide__feedback">
+                    <p>The sounds from WavesCo is great and it really helps our team to save time and production costs.</p>
+                  </div>
+                  <div class="swiper-slide__customer">
+                    <img class="swiper-slide__customer-avatar" src="./images/customers/customer-1.svg" width="140" height="140" alt="" loading="lazy">
+                    <h4 class="swiper-slide__customer-name">Anne Joyce</h4>
+                    <div class="swiper-slide__customer-occupation">
+                      <p>Video editor at Dude Perfect</p>
                     </div>
-                    <div class="swiper-slide__customer">
-                      <img class="swiper-slide__customer-avatar" src="./images/customers/customer-1.svg" width="140" height="140" alt="" loading="lazy">
-                      <h4 class="swiper-slide__customer-name">Anne Joyce</h4>
-                      <div class="swiper-slide__customer-occupation">
-                        <p>Video editor at Dude Perfect</p>
-                      </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                  </svg>       
+                  <div class="swiper-slide__feedback">
+                    <p>WavesCo was a great choice for our team for film production, the quality is amazingly great.</p>
+                  </div>
+                  <div class="swiper-slide__customer">
+                    <img class="swiper-slide__customer-avatar" src="./images/customers/customer-2.svg" width="140" height="140" alt="" loading="lazy">
+                    <h4 class="swiper-slide__customer-name">Edward Sann</h4>
+                    <div class="swiper-slide__customer-occupation">
+                      <p>Head of Video editor at Netflix</p>
                     </div>
-                  </li>
-                  <li class="swiper-slide" aria-label="Testimonial 2">
-                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
-                    </svg>       
-                    <div class="swiper-slide__feedback">
-                      <p>WavesCo was a great choice for our team for film production, the quality is amazingly great.</p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                  </svg>       
+                  <div class="swiper-slide__feedback">
+                    <p>Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.</p>
+                  </div>
+                  <div class="swiper-slide__customer">
+                    <img class="swiper-slide__customer-avatar" src="./images/customers/customer-3.svg" width="140" height="140" alt="" loading="lazy">
+                    <h4 class="swiper-slide__customer-name">Ronn D.</h4>
+                    <div class="swiper-slide__customer-occupation">
+                      <p>Video Editor at PewDiePie</p>
                     </div>
-                    <div class="swiper-slide__customer">
-                      <img class="swiper-slide__customer-avatar" src="./images/customers/customer-2.svg" width="140" height="140" alt="" loading="lazy">
-                      <h4 class="swiper-slide__customer-name">Edward Sann</h4>
-                      <div class="swiper-slide__customer-occupation">
-                        <p>Head of Video editor at Netflix</p>
-                      </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                  </svg>       
+                  <div class="swiper-slide__feedback">
+                    <p>The sounds from WavesCo is great and it really helps our team to save time and production costs.</p>
+                  </div>
+                  <div class="swiper-slide__customer">
+                    <img class="swiper-slide__customer-avatar" src="./images/customers/customer-1.svg" width="140" height="140" alt="" loading="lazy">
+                    <h4 class="swiper-slide__customer-name">Anne Joyce</h4>
+                    <div class="swiper-slide__customer-occupation">
+                      <p>Video editor at Dude Perfect</p>
                     </div>
-                  </li>
-                  <li class="swiper-slide" aria-label="Testimonial 3">
-                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
-                    </svg>       
-                    <div class="swiper-slide__feedback">
-                      <p>Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.</p>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                  </svg>       
+                  <div class="swiper-slide__feedback">
+                    <p>WavesCo was a great choice for our team for film production, the quality is amazingly great.</p>
+                  </div>
+                  <div class="swiper-slide__customer">
+                    <img class="swiper-slide__customer-avatar" src="./images/customers/customer-2.svg" width="140" height="140" alt="" loading="lazy">
+                    <h4 class="swiper-slide__customer-name">Edward Sann</h4>
+                    <div class="swiper-slide__customer-occupation">
+                      <p>Head of Video editor at Netflix</p>
                     </div>
-                    <div class="swiper-slide__customer">
-                      <img class="swiper-slide__customer-avatar" src="./images/customers/customer-3.svg" width="140" height="140" alt="" loading="lazy">
-                      <h4 class="swiper-slide__customer-name">Ronn D.</h4>
-                      <div class="swiper-slide__customer-occupation">
-                        <p>Video Editor at PewDiePie</p>
-                      </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
+                  </svg>       
+                  <div class="swiper-slide__feedback">
+                    <p>Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.</p>
+                  </div>
+                  <div class="swiper-slide__customer">
+                    <img class="swiper-slide__customer-avatar" src="./images/customers/customer-3.svg" width="140" height="140" alt="" loading="lazy">
+                    <h4 class="swiper-slide__customer-name">Ronn D.</h4>
+                    <div class="swiper-slide__customer-occupation">
+                      <p>Video Editor at PewDiePie</p>
                     </div>
-                  </li>
-                  <li class="swiper-slide" aria-label="Testimonial 4">
-                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
-                    </svg>       
-                    <div class="swiper-slide__feedback">
-                      <p>The sounds from WavesCo is great and it really helps our team to save time and production costs.</p>
-                    </div>
-                    <div class="swiper-slide__customer">
-                      <img class="swiper-slide__customer-avatar" src="./images/customers/customer-1.svg" width="140" height="140" alt="" loading="lazy">
-                      <h4 class="swiper-slide__customer-name">Anne Joyce</h4>
-                      <div class="swiper-slide__customer-occupation">
-                        <p>Video editor at Dude Perfect</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="swiper-slide" aria-label="Testimonial 5">
-                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
-                    </svg>       
-                    <div class="swiper-slide__feedback">
-                      <p>WavesCo was a great choice for our team for film production, the quality is amazingly great.</p>
-                    </div>
-                    <div class="swiper-slide__customer">
-                      <img class="swiper-slide__customer-avatar" src="./images/customers/customer-2.svg" width="140" height="140" alt="" loading="lazy">
-                      <h4 class="swiper-slide__customer-name">Edward Sann</h4>
-                      <div class="swiper-slide__customer-occupation">
-                        <p>Head of Video editor at Netflix</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="swiper-slide" aria-label="Testimonial 6">
-                    <svg class="swiper-slide__quote" width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M27.8615 2.13175C29.5782 3.95508 30.4999 6.00008 30.4999 9.31508C30.4999 15.1484 26.4049 20.3768 20.4499 22.9618L18.9615 20.6651C24.5199 17.6584 25.6065 13.7568 26.0399 11.2968C25.1449 11.7601 23.9732 11.9218 22.8249 11.8151C19.8182 11.5367 17.4482 9.06842 17.4482 6.00008C17.4482 4.45299 18.0628 2.96925 19.1567 1.87529C20.2507 0.78133 21.7344 0.166748 23.2815 0.166748C25.0699 0.166748 26.7799 0.983415 27.8615 2.13175ZM11.1949 2.13175C12.9115 3.95508 13.8332 6.00008 13.8332 9.31508C13.8332 15.1484 9.7382 20.3768 3.7832 22.9618L2.29487 20.6651C7.8532 17.6584 8.93987 13.7568 9.3732 11.2968C8.4782 11.7601 7.30654 11.9218 6.1582 11.8151C3.15154 11.5367 0.783203 9.06842 0.783203 6.00008C0.783203 4.45299 1.39778 2.96925 2.49175 1.87529C3.58571 0.78133 5.06944 0.166748 6.61654 0.166748C8.40487 0.166748 10.1149 0.983415 11.1965 2.13175H11.1949Z" fill="#F59E00"/>
-                    </svg>       
-                    <div class="swiper-slide__feedback">
-                      <p>Perfect way to get best quality sound effects for youtube videos. Thanks to WavesCo team.</p>
-                    </div>
-                    <div class="swiper-slide__customer">
-                      <img class="swiper-slide__customer-avatar" src="./images/customers/customer-3.svg" width="140" height="140" alt="" loading="lazy">
-                      <h4 class="swiper-slide__customer-name">Ronn D.</h4>
-                      <div class="swiper-slide__customer-occupation">
-                        <p>Video Editor at PewDiePie</p>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <div class="swiper-pagination"></div>
-              </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -625,7 +620,7 @@
     <div class="audio-modal visually-hidden" role="dialog" aria-label="Result sound effect modal">
       <div class="audio-modal__spinner"></div>
     </div>
-    <div class="audio-player is-hidden" aria-label="Active sound effect audio player">
+    <div class="audio-player is-hidden">
       <div class="audio-player__timeline">
         <div class="audio-player__progress"></div>
       </div>
@@ -640,10 +635,10 @@
         </div>
         <div class="audio-player__name">Music Song</div>
         <button class="audio-player__mute-button" type="button" onclick="toggleMusicSound()">
-          <svg id="voiceButton" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="visually-hidden" viewBox="0 0 16 16">
+          <svg id="voiceButton" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="visually-hidden" viewBox="0 0 16 16" aria-label="Unmute audio button">
             <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06M6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"/>
           </svg>
-          <svg id="muteButton" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="" viewBox="0 0 16 16">
+          <svg id="muteButton" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="" viewBox="0 0 16 16" aria-label="Mute audio button">
             <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/>
             <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/>
             <path d="M10.025 8a4.5 4.5 0 0 1-1.318 3.182L8 10.475A3.5 3.5 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.5 4.5 0 0 1 10.025 8M7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11"/>
@@ -651,7 +646,7 @@
         </button>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./bundle.min.js" defer></script>
+    <script src="./navigation-menu.min.js"></script>
+    <script src="./bundle.min.js" async></script>
   </body>
 </html>
